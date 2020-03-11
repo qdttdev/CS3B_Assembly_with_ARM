@@ -1,0 +1,162 @@
+/**** Lab 9-1 ****/
+
+as -g -o Lab9.o Lab9.s
+ld -o Lab9 Lab9.o 
+./Lab9 ; echo $?
+gdb -q ./Lab9
+
+
+************************************************************************
+gef> i r
+r0             0xa9ac79ad          0xa9ac79ad
+r1             0xa9ac79ae          0xa9ac79ae
+r2             0x13af0431          0x13af0431
+r3             0x13af0431          0x13af0431
+r4             0xec50fbcf          0xec50fbcf
+r5             0xec50fbcf          0xec50fbcf
+r6             0x0                 0x0
+r7             0x0                 0x0
+r8             0xdeadbeef          0xdeadbeef
+r9             0xcafebabe          0xcafebabe
+r10            0x0                 0x0
+r11            0x0                 0x0
+r12            0x0                 0x0
+sp             0xbefff330          0xbefff330
+lr             0x0                 0x0
+pc             0x1009c             0x1009c <_start+40>
+cpsr           0x20000010          0x20000010
+fpscr          0x0                 0x0
+gef> x/4xb 0x200b0
+0x200b0:	0xef	0xbe	0xad	0xde
+gef> x/4xb 0x200b4
+0x200b4:	0xbe	0xba	0xfe	0xca
+************************************************************************
+
+------------------------------------------------------------------------
+gef> i r	adds r0, r8, r9		@ r0 = r8 + r9 & set flags
+
+r0             0xa9ac79ad          0xa9ac79ad
+r1             0x0                 0x0
+r2             0x0                 0x0
+r3             0x0                 0x0
+r4             0x0                 0x0
+r5             0x0                 0x0
+r6             0x0                 0x0
+r7             0x0                 0x0
+r8             0xdeadbeef          0xdeadbeef
+r9             0xcafebabe          0xcafebabe
+r10            0x0                 0x0
+r11            0x0                 0x0
+r12            0x0                 0x0
+sp             0xbefff330          0xbefff330
+lr             0x0                 0x0
+pc             0x10088             0x10088 <_start+20>
+cpsr           0xa0000010          0xa0000010	// NZCV = 0010 because data lost
+fpscr          0x0                 0x0
+------------------------------------------------------------------------
+gef> i r	adc r1, r8, r9		@ r1 = r8 + r9 + carry
+
+r0             0xa9ac79ad          0xa9ac79ad
+r1             0xa9ac79ae          0xa9ac79ae	// carry = 1 --> 79AD + 1 = 79AE
+r2             0x0                 0x0
+r3             0x0                 0x0
+r4             0x0                 0x0
+r5             0x0                 0x0
+r6             0x0                 0x0
+r7             0x0                 0x0
+r8             0xdeadbeef          0xdeadbeef
+r9             0xcafebabe          0xcafebabe
+r10            0x0                 0x0
+r11            0x0                 0x0
+r12            0x0                 0x0
+sp             0xbefff330          0xbefff330
+lr             0x0                 0x0
+pc             0x1008c             0x1008c <_start+24>
+cpsr           0xa0000010          0xa0000010	// NZCV = 0010 (from before)
+fpscr          0x0                 0x0
+------------------------------------------------------------------------
+gef> i r	subs r2, r8, r9		@ r2 = r8 - r9 & set flags
+
+r0             0xa9ac79ad          0xa9ac79ad
+r1             0xa9ac79ae          0xa9ac79ae
+r2             0x13af0431          0x13af0431
+r3             0x0                 0x0
+r4             0x0                 0x0
+r5             0x0                 0x0
+r6             0x0                 0x0
+r7             0x0                 0x0
+r8             0xdeadbeef          0xdeadbeef
+r9             0xcafebabe          0xcafebabe
+r10            0x0                 0x0
+r11            0x0                 0x0
+r12            0x0                 0x0
+sp             0xbefff330          0xbefff330
+lr             0x0                 0x0
+pc             0x10090             0x10090 <_start+28>
+cpsr           0x20000010          0x20000010		// NZCV = 0010 (set!)
+fpscr          0x0                 0x0
+------------------------------------------------------------------------
+gef> i r	sbc r3, r8, r9		@ r3 = r8 - r9 + carry - 1
+
+r0             0xa9ac79ad          0xa9ac79ad
+r1             0xa9ac79ae          0xa9ac79ae
+r2             0x13af0431          0x13af0431
+r3             0x13af0431          0x13af0431		// + 1 - 1 = 0
+r4             0x0                 0x0
+r5             0x0                 0x0
+r6             0x0                 0x0
+r7             0x0                 0x0
+r8             0xdeadbeef          0xdeadbeef
+r9             0xcafebabe          0xcafebabe
+r10            0x0                 0x0
+r11            0x0                 0x0
+r12            0x0                 0x0
+sp             0xbefff330          0xbefff330
+lr             0x0                 0x0
+pc             0x10094             0x10094 <_start+32>
+cpsr           0x20000010          0x20000010		// NZCV = 0010 (from before)
+fpscr          0x0                 0x0
+------------------------------------------------------------------------
+gef> i r	rsb r4, r8, r9		@ r4 = r9 - r8
+
+r0             0xa9ac79ad          0xa9ac79ad
+r1             0xa9ac79ae          0xa9ac79ae
+r2             0x13af0431          0x13af0431
+r3             0x13af0431          0x13af0431
+r4             0xec50fbcf          0xec50fbcf
+r5             0x0                 0x0
+r6             0x0                 0x0
+r7             0x0                 0x0
+r8             0xdeadbeef          0xdeadbeef
+r9             0xcafebabe          0xcafebabe
+r10            0x0                 0x0
+r11            0x0                 0x0
+r12            0x0                 0x0
+sp             0xbefff330          0xbefff330
+lr             0x0                 0x0
+pc             0x10098             0x10098 <_start+36>
+cpsr           0x20000010          0x20000010	// NZCV = 0010 (from before)
+fpscr          0x0                 0x0
+------------------------------------------------------------------------
+gef> i r	rsc r5, r8, r9		@ r5 = r9 - r8 + carry - 1
+
+r0             0xa9ac79ad          0xa9ac79ad
+r1             0xa9ac79ae          0xa9ac79ae
+r2             0x13af0431          0x13af0431
+r3             0x13af0431          0x13af0431
+r4             0xec50fbcf          0xec50fbcf
+r5             0xec50fbcf          0xec50fbcf	// + 1 - 1 = 0
+r6             0x0                 0x0
+r7             0x0                 0x0
+r8             0xdeadbeef          0xdeadbeef
+r9             0xcafebabe          0xcafebabe
+r10            0x0                 0x0
+r11            0x0                 0x0
+r12            0x0                 0x0
+sp             0xbefff330          0xbefff330
+lr             0x0                 0x0
+pc             0x1009c             0x1009c <_start+40>
+cpsr           0x20000010          0x20000010	// NZCV = 0010 (from before)
+fpscr          0x0                 0x0
+
+

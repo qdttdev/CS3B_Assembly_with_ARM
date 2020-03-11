@@ -1,0 +1,21 @@
+as -g -o lab11.o lab11.s
+ld -o lab11 lab11.o barnett_12Feb20.a
+./lab11 ; echo $?
+
+// TEST INPUTS
+
+59
+
+65
+
+78
+
+88
+
+99
+
+100
+
+101
+
+

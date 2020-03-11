@@ -1,0 +1,20 @@
+pi@raspberrypi:~/cs3b/lab10 $ as -g -o lab10.o lab10.s
+pi@raspberrypi:~/cs3b/lab10 $ ld -o lab10 lab10.o barnett_12Feb20.a
+pi@raspberrypi:~/cs3b/lab10 $ ./lab10 ; echo $?
+
+pi@raspberrypi:~/cs3b/lab10 $ ./lab10
+Enter x: 500
+Enter y: 500
+
+500 = 500
+pi@raspberrypi:~/cs3b/lab10 $ ./lab10
+Enter x: -1
+Enter y: -5
+
+-1 > -5
+pi@raspberrypi:~/cs3b/lab10 $ ./lab10
+Enter x: 77
+Enter y: 66
+
+77 > 66
+pi@raspberrypi:~/cs3b/lab10 $ scrot
