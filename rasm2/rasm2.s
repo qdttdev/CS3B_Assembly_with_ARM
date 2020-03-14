@@ -246,8 +246,8 @@ cont_2:
 		 ** PRODUCT OPERATIONS **
 		 ************************/	
 			smull	r5, ip, r2, r3		@ r5 = r2 * r3
-			cmp		ip, r5, ASR #31		@ Branch to mul_oV if V == 1 (signed ovrflow)
-			bne		mul_oV
+			cmp		ip, r5, ASR #31		@ Compare and shifts r5 31 bits to the right
+			bne		mul_oV				@ Branch to mul_oV if not equals
 			
 			/** Store into its integer varible **/
 			ldr 	r4, =iPro			@ Load into r4 the address of iPro
