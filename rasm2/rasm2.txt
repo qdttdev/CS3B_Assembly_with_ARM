@@ -1,0 +1,121 @@
+as -g -o rasm2.o rasm2.s
+ld -o rasm2 rasm2.o barnett_12Feb20.a
+./rasm2 ; echo $?
+
+100
+200
+
+
+-152
+6
+
+
+146
+0
+
+
+1B0
+1400
+4000000000 
+400 
+
+
+100 
+1B0 
+1400 
+
+
+2147483647 
+10 
+
+
+1400 
+1B0 
+[Enter]
+
+
+
+pi@raspberrypi:~/cs3b/rasm2 $ ./rasm2
+
+     Name:       Caroline Ta
+     Program:    rasm2.s
+     Class:      CS3B
+     Date:       03-23-2020
+
+Enter your first  number: 100
+Enter your second number: 200
+
+The sum is        : 300
+The difference is : -100
+The product is    : 20000
+The quotient is   : 0
+The remainder is  : 100
+
+---------------------------------------------------------------------
+
+Enter your first  number: -152
+Enter your second number: 6
+
+The sum is        : -146
+The difference is : -158
+The product is    : -912
+The quotient is   : -25
+The remainder is  : -2
+
+---------------------------------------------------------------------
+
+Enter your first  number: 146
+Enter your second number: 0
+
+The sum is        : 146
+The difference is : 146
+The product is    : 0
+*** You cannot divide by 0. Thus, there is NO quotient or remainder ***
+
+---------------------------------------------------------------------
+
+Enter your first  number: 1B0
+*** INVALID NUMERIC STRING. RE-ENTER VALUE ***
+Enter your first  number: 1400
+Enter your second number: 4000000000
+*** OVERFLOW OCCURRED. RE-ENTER VALUE ***
+Enter your second number: 400
+
+The sum is        : 1800
+The difference is : 1000
+The product is    : 560000
+The quotient is   : 3
+The remainder is  : 200
+
+---------------------------------------------------------------------
+
+Enter your first  number: 100
+Enter your second number: 1B0
+*** INVALID NUMERIC STRING. RE-ENTER VALUE ***
+Enter your second number: 1400
+
+The sum is        : 1500
+The difference is : -1300
+The product is    : 140000
+The quotient is   : 0
+The remainder is  : 100
+
+---------------------------------------------------------------------
+
+Enter your first  number: 2147483647
+Enter your second number: 10
+
+*** OVERFLOW OCCURRED WHEN ADDING ***
+The difference is : 2147483637
+*** OVERFLOW OCCURRED WHEN MULTIPLYING ***
+The quotient is   : 214748364
+The remainder is  : 7
+
+---------------------------------------------------------------------
+
+Enter your first  number: 1400
+Enter your second number: 1B0
+*** INVALID NUMERIC STRING. RE-ENTER VALUE ***
+Enter your second number: 
+
+Thanks for using my program!! Good Day!
