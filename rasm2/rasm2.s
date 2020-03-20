@@ -26,7 +26,6 @@
 			szRemPr:	.asciz	"The remainder is  : "
 			szEnd:		.asciz	"Thanks for using my program!! Good Day!"
 			szBorder:	.asciz	"---------------------------------------------------------------------"	
-			szNull:		.asciz	""
 			crCr:		.byte 	10
 			
 		@ ERROR MESSAGES
@@ -144,7 +143,7 @@ num2_in:
 			bcs		inv_input_2			@ Branch to inv_input_2 if   Carry Flag C == 1 (invalid numeric string)
 			bvs		oV_input_2			@ Branch to oV_input_2 if oVerflow Flag V == 1 (input overflowed)		
 			
-			b		cont_1				@ Branch to continue			
+			b		cont_1				@ Branch to cont_1			
 			
 		/**************************************
 		 ** ERROR MESSAGES FOR INVALID INPUT **
@@ -154,28 +153,28 @@ inv_input_1:
 			bl		putstring			@ Call putch macro to output  
 			ldr		r0, =crCr			@ Load into r0 the address of crCr
 			bl		putch				@ Call putch macro to output
-			b		num1_in
+			b		num1_in				@ Branch to num1_in
 			
 oV_input_1:
 			ldr		r0, =szVInput		@ Load into r0 the address of szSum
 			bl		putstring			@ Call putch macro to output  
 			ldr		r0, =crCr			@ Load into r0 the address of crCr
 			bl		putch				@ Call putch macro to output
-			b		num1_in
+			b		num1_in				@ Branch to num1_in
 			
 inv_input_2:
 			ldr		r0, =szInvInput		@ Load into r0 the address of szSum
 			bl		putstring			@ Call putch macro to output  
 			ldr		r0, =crCr			@ Load into r0 the address of crCr
 			bl		putch				@ Call putch macro to output
-			b		num2_in	
+			b		num2_in				@ Branch to num2_in
 			
 oV_input_2:
 			ldr		r0, =szVInput		@ Load into r0 the address of szSum
 			bl		putstring			@ Call putch macro to output  
 			ldr		r0, =crCr			@ Load into r0 the address of crCr
 			bl		putch				@ Call putch macro to output
-			b		num2_in	
+			b		num2_in				@ Branch to num2_in
 
 cont_1:
 			ldr		r0, =crCr			@ Load into r0 the address of crCr
@@ -211,7 +210,7 @@ cont_1:
 			bl		putstring			@ Call putch macro to output  
 			ldr		r0, =crCr			@ Load into r0 the address of crCr
 			bl		putch				@ Call putch macro to output  
-			b		cont_2
+			b		cont_2				@ Branch to cont_2
 											
 add_oV:			
 			ldr		r0, =szVAdd			@ Load into r0 the address of szDivZero
