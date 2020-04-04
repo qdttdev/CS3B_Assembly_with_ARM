@@ -1,0 +1,81 @@
+as -g -o String1.o String1.s
+as -g -o String_Length.o String_Length.s
+as -g -o String_equals.o String_equals.s
+as -g -o String_equalsIgnoreCase.o String_equalsIgnoreCase.s
+as -g -o String_copy.o String_copy.s
+as -g -o String_substring_1.o String_substring_1.s
+as -g -o String_substring_2.o String_substring_2.s
+as -g -o String_charAt.o String_charAt.s
+as -g -o String_startsWith_1.o String_startsWith_1.s
+as -g -o String_startsWith_2.o String_startsWith_2.s
+as -g -o String_endsWith.o String_endsWith.s
+ld -o String1 String_Length.o String_equals.o String_equalsIgnoreCase.o String_copy.o String_substring_1.o String_substring_2.o String_charAt.o String_startsWith_1.o String_startsWith_2.o String_endsWith.o /usr/lib/arm-linux-gnueabihf/libc.so String1.o -dynamic-linker /lib/ld-linux-armhf.so.3 barnett_12Feb20.a
+./String1 ; echo $?
+
+gdb -q ./String1 
+
+s1 = Cat in the hat.
+s2 = Green eggs and ham.
+s3 = cat in the hat.
+
+************************************************************************
+
+pi@raspberrypi:~/cs3b/rasm3 $ as -g -o String1.o String1.s
+pi@raspberrypi:~/cs3b/rasm3 $ as -g -o String_Length.o String_Length.s
+pi@raspberrypi:~/cs3b/rasm3 $ as -g -o String_equals.o String_equals.s
+pi@raspberrypi:~/cs3b/rasm3 $ as -g -o String_equalsIgnoreCase.o String_equalsIgnoreCase.s
+pi@raspberrypi:~/cs3b/rasm3 $ as -g -o String_copy.o String_copy.s
+pi@raspberrypi:~/cs3b/rasm3 $ as -g -o String_substring_1.o String_substring_1.s
+pi@raspberrypi:~/cs3b/rasm3 $ as -g -o String_substring_2.o String_substring_2.s
+pi@raspberrypi:~/cs3b/rasm3 $ as -g -o String_charAt.o String_charAt.s
+pi@raspberrypi:~/cs3b/rasm3 $ as -g -o String_startsWith_1.o String_startsWith_1.s
+pi@raspberrypi:~/cs3b/rasm3 $ as -g -o String_startsWith_2.o String_startsWith_2.s
+pi@raspberrypi:~/cs3b/rasm3 $ as -g -o String_endsWith.o String_endsWith.s
+pi@raspberrypi:~/cs3b/rasm3 $ ld -o String1 String_Length.o String_equals.o String_equalsIgnoreCase.o String_copy.o String_substring_1.o String_substring_2.o String_charAt.o String_startsWith_1.o String_startsWith_2.o String_endsWith.o /usr/lib/arm-linux-gnueabihf/libc.so String1.o -dynamic-linker /lib/ld-linux-armhf.so.3 barnett_12Feb20.a
+pi@raspberrypi:~/cs3b/rasm3 $ ./String1 
+
+	Name:       Caroline Ta
+	Assignment: Rasm3 - Member 1
+	Class:      CS3B
+	Date:       04-08-2020
+
+s1 = Cat in the hat.
+s2 = Green eggs and ham.
+s3 = cat in the hat.
+
+1.	s1.String_Length() = 15
+	s2.String_Length() = 19
+	s3.String_Length() = 15
+
+2.	String_equals(s1,s3) = FALSE
+
+3.	String_equals(s1,s1) = TRUE
+
+4.	String_equalsIgnoreCase(s1,s3) = TRUE
+
+5.	String_equalsIgnoreCase(s1,s2) = FALSE
+
+6.	s4 = String_copy(s1)
+	s1 = Cat in the hat.
+	s4 = Cat in the hat.
+
+7.	String_substring_1(s3,4,13) = "in the hat"
+
+8.	String_substring_2(s3,7) = "the hat."
+
+9.	String_charAt(s2,4) = 'n'
+
+10.	String_startsWith_1(s1,11,"hat.") = TRUE
+
+11.	String_startsWith_2(s1,"Cat") = TRUE
+
+12.	String_endsWith(s1,"in the hat.") = TRUE
+
+
+
+
+
+
+
+
+
