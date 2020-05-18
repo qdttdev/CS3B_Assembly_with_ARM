@@ -1,0 +1,189 @@
+g++ -o rasm5 main.cpp OutToFile.cpp rasm5.h S2_cBubbleSort.cpp S3_aBubbleSort.s S4_cInsertionSort.cpp S5_aInsertionSort.s T2_cBubbleTimer.cpp T3_aBubbleTimer.cpp T4_cInsertionTimer.cpp T5_aInsertionTimer.cpp
+./rasm5
+
+pi@raspberrypi:~/cs3b/CS3B_Rasm5 $ g++ -o rasm5 main.cpp OutToFile.cpp rasm5.h S2_cBubbleSort.cpp S3_aBubbleSort.s S4_cInsertionSort.cpp S5_aInsertionSort.s T2_cBubbleTimer.cpp T3_aBubbleTimer.cpp T4_cInsertionTimer.cpp T5_aInsertionTimer.cpp
+pi@raspberrypi:~/cs3b/CS3B_Rasm5 $ 
+pi@raspberrypi:~/cs3b/CS3B_Rasm5 $ ./rasm5
+*******************************************************************************
+* AUTHOR: Caroline Ta
+* ID:     1061262
+* CLASS:  CS 3B - RASM 5
+* DATE:   05/13/2020
+*******************************************************************************
+
+	RASM5: C++ vs Assembly
+	File Element Count: 0
+
+------------------------------------------------
+C        bubbleSort    Time: 0.0000000000 secs
+Assembly bubbleSort    Time: 0.0000000000 secs
+
+C        insertionSort Time: 0.0000000000 secs
+Assembly insertionSort Time: 0.0000000000 secs
+------------------------------------------------
+
+<1> Load input file (integers)
+<2> Sort using C bubbleSort algorithm
+<3> Sort using Assembly bubbleSort
+<4> Sort using C insertionSort algorithm
+<5> Sort using Assembly insertionSort algorithm
+<6> Quit
+
+Enter choice: 1
+
+
+	>>> INPUT FILE WAS SUCCESSFULLY LOADED...
+		[Enter to continue]
+
+
+
+
+
+	RASM5: C++ vs Assembly
+	File Element Count: 200000
+
+------------------------------------------------
+C        bubbleSort    Time: 0.0000000000 secs
+Assembly bubbleSort    Time: 0.0000000000 secs
+
+C        insertionSort Time: 0.0000000000 secs
+Assembly insertionSort Time: 0.0000000000 secs
+------------------------------------------------
+
+<1> Load input file (integers)
+<2> Sort using C bubbleSort algorithm
+<3> Sort using Assembly bubbleSort
+<4> Sort using C insertionSort algorithm
+<5> Sort using Assembly insertionSort algorithm
+<6> Quit
+
+Enter choice: 2
+
+
+
+It took the program 339.4410180000 seconds to execute C Bubble Sort function.
+	>>> FILE WAS SORTED USING C BUBBLE SORT...
+		[Enter to continue]
+
+
+
+
+
+	RASM5: C++ vs Assembly
+	File Element Count: 200000
+
+------------------------------------------------
+C        bubbleSort    Time: 339.4410180000 secs
+Assembly bubbleSort    Time: 0.0000000000 secs
+
+C        insertionSort Time: 0.0000000000 secs
+Assembly insertionSort Time: 0.0000000000 secs
+------------------------------------------------
+
+<1> Load input file (integers)
+<2> Sort using C bubbleSort algorithm
+<3> Sort using Assembly bubbleSort
+<4> Sort using C insertionSort algorithm
+<5> Sort using Assembly insertionSort algorithm
+<6> Quit
+
+Enter choice: 3
+
+
+
+It took the program 168.4286760000 seconds to execute Assembly Bubble Sort function.
+	>>> FILE WAS SORTED USING ASSEMBLY BUBBLE SORT...
+		[Enter to continue]
+
+
+
+
+
+	RASM5: C++ vs Assembly
+	File Element Count: 200000
+
+------------------------------------------------
+C        bubbleSort    Time: 339.4410180000 secs
+Assembly bubbleSort    Time: 168.4286760000 secs
+
+C        insertionSort Time: 0.0000000000 secs
+Assembly insertionSort Time: 0.0000000000 secs
+------------------------------------------------
+
+<1> Load input file (integers)
+<2> Sort using C bubbleSort algorithm
+<3> Sort using Assembly bubbleSort
+<4> Sort using C insertionSort algorithm
+<5> Sort using Assembly insertionSort algorithm
+<6> Quit
+
+Enter choice: 4
+
+
+
+It took the program 120.4967070000 seconds to execute C Insertion Sort function.
+	>>> FILE WAS SORTED USING C INSERTION SORT...
+		[Enter to continue]
+
+
+
+
+
+	RASM5: C++ vs Assembly
+	File Element Count: 200000
+
+------------------------------------------------
+C        bubbleSort    Time: 339.4410180000 secs
+Assembly bubbleSort    Time: 168.4286760000 secs
+
+C        insertionSort Time: 120.4967070000 secs
+Assembly insertionSort Time: 0.0000000000 secs
+------------------------------------------------
+
+<1> Load input file (integers)
+<2> Sort using C bubbleSort algorithm
+<3> Sort using Assembly bubbleSort
+<4> Sort using C insertionSort algorithm
+<5> Sort using Assembly insertionSort algorithm
+<6> Quit
+
+Enter choice: 5
+
+
+
+It took the program 29.1658770000 seconds to execute Assembly Insertion Sort function.
+	>>> FILE WAS SORTED USING ASSEMBLY INSERTION SORT...
+		[Enter to continue] 
+
+
+
+
+
+	RASM5: C++ vs Assembly
+	File Element Count: 200000
+
+------------------------------------------------
+C        bubbleSort    Time: 339.4410180000 secs
+Assembly bubbleSort    Time: 168.4286760000 secs
+
+C        insertionSort Time: 120.4967070000 secs
+Assembly insertionSort Time: 29.1658770000 secs
+------------------------------------------------
+
+<1> Load input file (integers)
+<2> Sort using C bubbleSort algorithm
+<3> Sort using Assembly bubbleSort
+<4> Sort using C insertionSort algorithm
+<5> Sort using Assembly insertionSort algorithm
+<6> Quit
+
+Enter choice: 6
+
+
+
+
+
+
+
+PROGRAM ENDED - THANK YOU FOR USING THE PROGRAM.
+pi@raspberrypi:~/cs3b/CS3B_Rasm5 $ 
