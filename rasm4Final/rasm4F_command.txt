@@ -1,0 +1,549 @@
+as -g -o rasm4.o rasm4.s
+as -g -o menu.o menu.s
+ld -o rasm4 menu.o /usr/lib/arm-linux-gnueabihf/libc.so rasm4.o -dynamic-linker /lib/ld-linux-armhf.so.3 barnett_12Feb20.a list.a string.a
+./rasm4
+
+
+/***********************************************************************
+							TEST RUN 1
+***********************************************************************/
+pi@raspberrypi:~/cs3b/rasm4Final $ as -g -o rasm4.o rasm4.s
+pi@raspberrypi:~/cs3b/rasm4Final $ as -g -o menu.o menu.s
+pi@raspberrypi:~/cs3b/rasm4Final $ ld -o rasm4 menu.o /usr/lib/arm-linux-gnueabihf/libc.so rasm4.o -dynamic-linker /lib/ld-linux-armhf.so.3 barnett_12Feb20.a list.a string.a
+pi@raspberrypi:~/cs3b/rasm4Final $ ./rasm4
+
+
+
+	Name:       Caroline Ta (Member 1) & Isaac Estrada (Member 2) 
+	Assignment: Rasm4
+	Class:      CS3B
+	Date:       04-22-2020
+
+
+	RASM4 TEXT EDITOR
+	Data Structure Memory Consumption: 0 bytes
+	Number of Nodes: 0
+
+<1> View all strings
+
+<2> Add string
+
+<3> Delete string. Given an index #, delete the entire string and de-allocate memory (including the node).
+
+<4> Edit string. Given an index #, replace old string w/ new string. Allocate/De-allocate as needed.
+
+<5> String search. Regardless of case, return all strings that match the substring given.
+
+<6> Save File (output.txt)
+
+<7> Quit
+
+Enter selection: 1
+
+
+
+List is empty!
+
+PRESS ENTER TO CONTINUE
+
+
+
+	Name:       Caroline Ta (Member 1) & Isaac Estrada (Member 2) 
+	Assignment: Rasm4
+	Class:      CS3B
+	Date:       04-22-2020
+
+
+	RASM4 TEXT EDITOR
+	Data Structure Memory Consumption: 0 bytes
+	Number of Nodes: 0
+
+<1> View all strings
+
+<2> Add string
+
+<3> Delete string. Given an index #, delete the entire string and de-allocate memory (including the node).
+
+<4> Edit string. Given an index #, replace old string w/ new string. Allocate/De-allocate as needed.
+
+<5> String search. Regardless of case, return all strings that match the substring given.
+
+<6> Save File (output.txt)
+
+<7> Quit
+
+Enter selection: 2
+
+	<a> from Keyboard
+	<b> from File. Static file named input.txt
+a
+Enter string: Given to you during demo time.
+
+
+
+	Name:       Caroline Ta (Member 1) & Isaac Estrada (Member 2) 
+	Assignment: Rasm4
+	Class:      CS3B
+	Date:       04-22-2020
+
+
+	RASM4 TEXT EDITOR
+	Data Structure Memory Consumption: 40 bytes
+	Number of Nodes: 1
+
+<1> View all strings
+
+<2> Add string
+
+<3> Delete string. Given an index #, delete the entire string and de-allocate memory (including the node).
+
+<4> Edit string. Given an index #, replace old string w/ new string. Allocate/De-allocate as needed.
+
+<5> String search. Regardless of case, return all strings that match the substring given.
+
+<6> Save File (output.txt)
+
+<7> Quit
+
+Enter selection: 1
+(1) Given to you during demo time.
+
+PRESS ENTER TO CONTINUE
+
+
+
+	Name:       Caroline Ta (Member 1) & Isaac Estrada (Member 2) 
+	Assignment: Rasm4
+	Class:      CS3B
+	Date:       04-22-2020
+
+
+	RASM4 TEXT EDITOR
+	Data Structure Memory Consumption: 40 bytes
+	Number of Nodes: 1
+
+<1> View all strings
+
+<2> Add string
+
+<3> Delete string. Given an index #, delete the entire string and de-allocate memory (including the node).
+
+<4> Edit string. Given an index #, replace old string w/ new string. Allocate/De-allocate as needed.
+
+<5> String search. Regardless of case, return all strings that match the substring given.
+
+<6> Save File (output.txt)
+
+<7> Quit
+
+Enter selection: 7
+
+
+
+/***********************************************************************
+			TEST RUN 2 (MAKE SURE TO DELETE "output.txt")
+	else it will error a difference we have an extra endl in output.txt
+***********************************************************************/
+pi@raspberrypi:~/cs3b/rasm4Final $ ./rasm4
+
+
+
+	Name:       Caroline Ta (Member 1) & Isaac Estrada (Member 2) 
+	Assignment: Rasm4
+	Class:      CS3B
+	Date:       04-22-2020
+
+
+	RASM4 TEXT EDITOR
+	Data Structure Memory Consumption: 0 bytes
+	Number of Nodes: 0
+
+<1> View all strings
+
+<2> Add string
+
+<3> Delete string. Given an index #, delete the entire string and de-allocate memory (including the node).
+
+<4> Edit string. Given an index #, replace old string w/ new string. Allocate/De-allocate as needed.
+
+<5> String search. Regardless of case, return all strings that match the substring given.
+
+<6> Save File (output.txt)
+
+<7> Quit
+
+Enter selection: 2
+
+	<a> from Keyboard
+	<b> from File. Static file named input.txt
+b
+
+
+
+FILE IS READ from "input.txt"
+PRESS ENTER TO CONTINUE
+
+
+
+	Name:       Caroline Ta (Member 1) & Isaac Estrada (Member 2) 
+	Assignment: Rasm4
+	Class:      CS3B
+	Date:       04-22-2020
+
+
+	RASM4 TEXT EDITOR
+	Data Structure Memory Consumption: 42185 bytes
+	Number of Nodes: 1168
+
+<1> View all strings
+
+<2> Add string
+
+<3> Delete string. Given an index #, delete the entire string and de-allocate memory (including the node).
+
+<4> Edit string. Given an index #, replace old string w/ new string. Allocate/De-allocate as needed.
+
+<5> String search. Regardless of case, return all strings that match the substring given.
+
+<6> Save File (output.txt)
+
+<7> Quit
+
+Enter selection: 6
+
+
+
+FILE IS SAVED to "output.txt"
+PRESS ENTER TO CONTINUE
+
+
+
+	Name:       Caroline Ta (Member 1) & Isaac Estrada (Member 2) 
+	Assignment: Rasm4
+	Class:      CS3B
+	Date:       04-22-2020
+
+
+	RASM4 TEXT EDITOR
+	Data Structure Memory Consumption: 42185 bytes
+	Number of Nodes: 1168
+
+<1> View all strings
+
+<2> Add string
+
+<3> Delete string. Given an index #, delete the entire string and de-allocate memory (including the node).
+
+<4> Edit string. Given an index #, replace old string w/ new string. Allocate/De-allocate as needed.
+
+<5> String search. Regardless of case, return all strings that match the substring given.
+
+<6> Save File (output.txt)
+
+<7> Quit
+
+Enter selection: 7
+pi@raspberrypi:~/cs3b/rasm4Final $ diff -s input.txt output.txt
+Files input.txt and output.txt are identical
+
+
+
+/***********************************************************************
+							TEST RUN 3
+***********************************************************************/
+	Name:       Caroline Ta (Member 1) & Isaac Estrada (Member 2) 
+	Assignment: Rasm4
+	Class:      CS3B
+	Date:       04-22-2020
+
+
+	RASM4 TEXT EDITOR
+	Data Structure Memory Consumption: 0 bytes
+	Number of Nodes: 0
+
+<1> View all strings
+
+<2> Add string
+
+<3> Delete string. Given an index #, delete the entire string and de-allocate memory (including the node).
+
+<4> Edit string. Given an index #, replace old string w/ new string. Allocate/De-allocate as needed.
+
+<5> String search. Regardless of case, return all strings that match the substring given.
+
+<6> Save File (output.txt)
+
+<7> Quit
+
+Enter selection: 2
+
+	<a> from Keyboard
+	<b> from File. Static file named input.txt
+b
+
+
+
+FILE IS READ from "input.txt"
+PRESS ENTER TO CONTINUE
+
+
+
+	Name:       Caroline Ta (Member 1) & Isaac Estrada (Member 2) 
+	Assignment: Rasm4
+	Class:      CS3B
+	Date:       04-22-2020
+
+
+	RASM4 TEXT EDITOR
+	Data Structure Memory Consumption: 42185 bytes
+	Number of Nodes: 1168
+
+<1> View all strings
+
+<2> Add string
+
+<3> Delete string. Given an index #, delete the entire string and de-allocate memory (including the node).
+
+<4> Edit string. Given an index #, replace old string w/ new string. Allocate/De-allocate as needed.
+
+<5> String search. Regardless of case, return all strings that match the substring given.
+
+<6> Save File (output.txt)
+
+<7> Quit
+
+Enter selection: 2
+
+	<a> from Keyboard
+	<b> from File. Static file named input.txt
+a
+Enter string: Segmentation Fault
+
+
+
+	Name:       Caroline Ta (Member 1) & Isaac Estrada (Member 2) 
+	Assignment: Rasm4
+	Class:      CS3B
+	Date:       04-22-2020
+
+
+	RASM4 TEXT EDITOR
+	Data Structure Memory Consumption: 42213 bytes
+	Number of Nodes: 1169
+
+<1> View all strings
+
+<2> Add string
+
+<3> Delete string. Given an index #, delete the entire string and de-allocate memory (including the node).
+
+<4> Edit string. Given an index #, replace old string w/ new string. Allocate/De-allocate as needed.
+
+<5> String search. Regardless of case, return all strings that match the substring given.
+
+<6> Save File (output.txt)
+
+<7> Quit
+
+Enter selection: 1
+
+
+
+(1152) At our house we play out back.
+(1153) We play a game called ring the Gack.
+(1154) Would you like to play this game?
+(1155) Come down! We have the only Gack in town.
+(1156) 
+(1157) Look what we found in the park in the dark.
+(1158) We will take him home, we will call him Clark.
+(1159) He will live at our house, he will grow and grow.
+(1160) Will our mother like this? We don't know.
+(1161) 
+(1162) And now, Good night.
+(1163) It is time to sleep
+(1164) So we will sleep with our pet Zeep.
+(1165) Today is gone. Today was fun.
+(1166) Tomorrow is another one.
+(1167) Every day, from here to there.
+(1168) funny things are everywhere.(1169) Segmentation Fault
+
+PRESS ENTER TO CONTINUE
+
+
+
+	Name:       Caroline Ta (Member 1) & Isaac Estrada (Member 2) 
+	Assignment: Rasm4
+	Class:      CS3B
+	Date:       04-22-2020
+
+
+	RASM4 TEXT EDITOR
+	Data Structure Memory Consumption: 42213 bytes
+	Number of Nodes: 1169
+
+<1> View all strings
+
+<2> Add string
+
+<3> Delete string. Given an index #, delete the entire string and de-allocate memory (including the node).
+
+<4> Edit string. Given an index #, replace old string w/ new string. Allocate/De-allocate as needed.
+
+<5> String search. Regardless of case, return all strings that match the substring given.
+
+<6> Save File (output.txt)
+
+<7> Quit
+
+Enter selection: 5
+
+
+
+Enter string: And now, Good night.
+(1162) And now, Good night.
+
+PRESS ENTER TO CONTINUE
+
+
+
+	Name:       Caroline Ta (Member 1) & Isaac Estrada (Member 2) 
+	Assignment: Rasm4
+	Class:      CS3B
+	Date:       04-22-2020
+
+
+	RASM4 TEXT EDITOR
+	Data Structure Memory Consumption: 42213 bytes
+	Number of Nodes: 1169
+
+<1> View all strings
+
+<2> Add string
+
+<3> Delete string. Given an index #, delete the entire string and de-allocate memory (including the node).
+
+<4> Edit string. Given an index #, replace old string w/ new string. Allocate/De-allocate as needed.
+
+<5> String search. Regardless of case, return all strings that match the substring given.
+
+<6> Save File (output.txt)
+
+<7> Quit
+
+Enter selection: 3
+
+
+
+Enter line number: 1162
+
+
+
+	Name:       Caroline Ta (Member 1) & Isaac Estrada (Member 2) 
+	Assignment: Rasm4
+	Class:      CS3B
+	Date:       04-22-2020
+
+
+	RASM4 TEXT EDITOR
+	Data Structure Memory Consumption: 42182 bytes
+	Number of Nodes: 1168
+
+<1> View all strings
+
+<2> Add string
+
+<3> Delete string. Given an index #, delete the entire string and de-allocate memory (including the node).
+
+<4> Edit string. Given an index #, replace old string w/ new string. Allocate/De-allocate as needed.
+
+<5> String search. Regardless of case, return all strings that match the substring given.
+
+<6> Save File (output.txt)
+
+<7> Quit
+
+Enter selection: 1
+
+
+
+(1152) At our house we play out back.
+(1153) We play a game called ring the Gack.
+(1154) Would you like to play this game?
+(1155) Come down! We have the only Gack in town.
+(1156) 
+(1157) Look what we found in the park in the dark.
+(1158) We will take him home, we will call him Clark.
+(1159) He will live at our house, he will grow and grow.
+(1160) Will our mother like this? We don't know.
+(1161) 
+(1162) It is time to sleep
+(1163) So we will sleep with our pet Zeep.
+(1164) Today is gone. Today was fun.
+(1165) Tomorrow is another one.
+(1166) Every day, from here to there.
+(1167) funny things are everywhere.(1168) Segmentation Fault
+
+PRESS ENTER TO CONTINUE
+
+
+
+	Name:       Caroline Ta (Member 1) & Isaac Estrada (Member 2) 
+	Assignment: Rasm4
+	Class:      CS3B
+	Date:       04-22-2020
+
+
+	RASM4 TEXT EDITOR
+	Data Structure Memory Consumption: 42182 bytes
+	Number of Nodes: 1168
+
+<1> View all strings
+
+<2> Add string
+
+<3> Delete string. Given an index #, delete the entire string and de-allocate memory (including the node).
+
+<4> Edit string. Given an index #, replace old string w/ new string. Allocate/De-allocate as needed.
+
+<5> String search. Regardless of case, return all strings that match the substring given.
+
+<6> Save File (output.txt)
+
+<7> Quit
+
+Enter selection: 5
+
+
+
+Enter string: And now, Good night.
+
+PRESS ENTER TO CONTINUE
+
+
+
+	Name:       Caroline Ta (Member 1) & Isaac Estrada (Member 2) 
+	Assignment: Rasm4
+	Class:      CS3B
+	Date:       04-22-2020
+
+
+	RASM4 TEXT EDITOR
+	Data Structure Memory Consumption: 42182 bytes
+	Number of Nodes: 1168
+
+<1> View all strings
+
+<2> Add string
+
+<3> Delete string. Given an index #, delete the entire string and de-allocate memory (including the node).
+
+<4> Edit string. Given an index #, replace old string w/ new string. Allocate/De-allocate as needed.
+
+<5> String search. Regardless of case, return all strings that match the substring given.
+
+<6> Save File (output.txt)
+
+<7> Quit
+
+Enter selection: 7
+
